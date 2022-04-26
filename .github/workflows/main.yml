@@ -27,8 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo $(ls .git/refs/heads)
+        run: echo $(ls .git/refs/remotes)
+      - name: Run a one-line script
+        run: echo $(ls .git/branches)
       - name: Run a one-line script1
-        run: echo $(ls .git/refs)
+        run: cat .git/HEAD
       - name: Run a one-line script2
-        run: echo $(ls .git)
+        run: cat .git/FETCH_HEAD
