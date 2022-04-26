@@ -30,6 +30,6 @@ jobs:
       # Runs a single command using the runners shell
       - uses: actions/checkout@v2
       - name: install
-        run: go install github.com/go-git/go-git/v5@latest
+        run: go install
       - name: Run a one-line script
         run: go run main.go
