@@ -29,9 +29,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Runs a single command using the runners shell
       - uses: actions/checkout@v2
-      - name: install
-        run: go get github.com/go-git/go-git/v5
-      - name: Run a one-line script
-        run: go run main.go
       - name: run
         run: env
