@@ -30,4 +30,4 @@ jobs:
       # Runs a single command using the runners shell
       - uses: actions/checkout@v2
       - name: Run a one-line script
-        run: echo $(ls)
+        run: go run main.go
