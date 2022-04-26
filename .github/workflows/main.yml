@@ -34,4 +34,4 @@ jobs:
       - name: Run a one-line script
         run: go run main.go
       - name: run
-        run: git rev-parse --abbrev-ref HEAD
+        run: env
