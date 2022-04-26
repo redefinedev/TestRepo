@@ -22,15 +22,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    # go setup
+      - uses: actions/setup-go@v3
+        with:
+          go-version: "^1.17" # The Go version to download (if necessary) and use.
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo $(ls .git/refs/remotes/pull)
-      - name: Run a one-line script
-        run: echo $(ls .git/branches)
-      - name: Run a one-line script1
-        run: cat .git/HEAD
-      - name: Run a one-line script2
-        run: cat .git/FETCH_HEAD
+        run: go run main.go
