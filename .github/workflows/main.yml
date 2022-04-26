@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo $(ls .git/refs/remotes)
+        run: echo $(ls .git/refs/remotes/pull)
       - name: Run a one-line script
         run: echo $(ls .git/branches)
       - name: Run a one-line script1
