@@ -11,4 +11,9 @@ func main() {
 		return
 	}
 	fmt.Println(repo.Head())
+	refs, err := repo.Branches()
+	refs.ForEach(func(ref *plumbing.Reference) error {
+		fmt.Println(ref.Name().Short())
+		return nil
+	})
 }
