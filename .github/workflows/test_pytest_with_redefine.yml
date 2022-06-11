@@ -46,15 +46,15 @@ jobs:
           cat /tmp/coyote.log
           if [ ! -z $(grep "Dune client Sending data" "/tmp/coyote.log") ]; 
           then
-            echo "success. coyote sent to dune";
-          elsed
-            echo "coyote failed. check logs"
-            exit 1
+            echo "coyote processing success";
+          else
+            echo "coyote processing failed. check logs";
+            exit 1;
           fi
           if [ ! -z $(grep "Failed sending git changes to Dune" "/tmp/coyote.log") ]; 
           then
-            echo "coyote failed to send to dune. check logs"
-            exit 1
+            echo "coyote failed to send to dune. check logs";
+            exit 1;
           else
-            echo "success. coyote sent to dune";
+            echo "coyote success. sent to dune";
           fi
