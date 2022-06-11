@@ -52,7 +52,7 @@ jobs:
             echo "coyote processing failed. check logs";
             exit 1;
           fi
-          if [ -z $(grep -i -q -F "Failed sending git changes to Dune" "/tmp/coyote.log") ]; 
+          if [ ! -z $(grep -i -q -F "Failed sending git changes to Dune" "/tmp/coyote.log") ]; 
           then
             echo "coyote failed to send to dune. check logs";
             exit 1;
