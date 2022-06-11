@@ -25,7 +25,10 @@ jobs:
 
       - name: Install pytest
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: pip install pytest
+        run: |
+          git fetch --all
+          git checkout feature/pytests_for_e2e
+          pip install pytest
         
       - name: cleanup
         run: |
