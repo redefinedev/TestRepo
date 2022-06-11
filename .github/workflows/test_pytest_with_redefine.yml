@@ -37,6 +37,9 @@ jobs:
       - name: Test with pytest
         run: |
           echo ${GITHUB_REF_NAME}
+          git log
+          git checkout main
+          git checkout -
           export GITHUB_BASE_REF="main"
           export REDEFINE_COYOTE_GIT_PATH=${{ github.workspace }}
           export REDEFINE_CUSTOMER_ID="REDEFINE_PR_TEST"; \
