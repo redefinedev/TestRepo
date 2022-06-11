@@ -44,6 +44,7 @@ jobs:
           /tmp/redefine_installation
           pytest -sv || true
           cat /tmp/coyote.log
+          if [ ! -z $(grep "Dune client Sending data" "/tmp/coyote.log") ]; then echo "FOUND"; else exit 1; fi
           if [ ! -z $(grep "Dune client Sending data" "/tmp/coyote.log") ]; 
           then
             echo "coyote processing success";
