@@ -24,13 +24,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install pytest
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           pip install pytest
-        
-      - name: cleanup
-        run: |
-          ss -tpl
       # Test python
       - name: Test with pytest
         run: |
@@ -42,7 +37,7 @@ jobs:
           export REDEFINE_COYOTE_GIT_PATH=${{ github.workspace }}
           export REDEFINE_CUSTOMER_ID="REDEFINE_PR_TEST"; \
           export CI_TYPE="GITHUB"; \
-          export REDEFINE_RELEASE_NAME="medigate_canary"; \
+          export REDEFINE_RELEASE_NAME="releases"; \
           export GITHUB_HEAD_REF="feature/pytests_for_e2e"; \
           wget -q https://redefine-installation-public.s3.eu-west-1.amazonaws.com/releases/redefine_installation -O /tmp/redefine_installation; \
           chmod u+x /tmp/redefine_installation; \
