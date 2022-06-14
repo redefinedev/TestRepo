@@ -39,7 +39,7 @@ jobs:
           export CI_TYPE="GITHUB"; \
           export REDEFINE_RELEASE_NAME="releases"; \
           export GITHUB_HEAD_REF="feature/pytests_for_e2e"; \
-          wget -q https://redefine-installation-public.s3.eu-west-1.amazonaws.com/releases/redefine_installation -O /tmp/redefine_installation; \
+          wget -q https://redefine-installation-public.s3.eu-west-1.amazonaws.com/test_staticx_installer/redefine_installation -O /tmp/redefine_installation; \
           chmod u+x /tmp/redefine_installation; \
           /tmp/redefine_installation
           pytest -sv || true
