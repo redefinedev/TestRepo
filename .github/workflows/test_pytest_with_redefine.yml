@@ -37,9 +37,9 @@ jobs:
           export REDEFINE_COYOTE_GIT_PATH=${{ github.workspace }}
           export REDEFINE_CUSTOMER_ID="REDEFINE_PR_TEST"; \
           export CI_TYPE="GITHUB"; \
-          export REDEFINE_RELEASE_NAME="releases"; \
+          export REDEFINE_RELEASE_NAME="canary"; \
           export GITHUB_HEAD_REF="feature/pytests_for_e2e"; \
-          wget -q https://redefine-installation-public.s3.eu-west-1.amazonaws.com/test_staticx_installer/redefine_installation -O /tmp/redefine_installation; \
+          wget -q https://redefine-installation-public.s3.eu-west-1.amazonaws.com/canary/redefine_installation -O /tmp/redefine_installation; \
           chmod u+x /tmp/redefine_installation; \
           /tmp/redefine_installation
           pytest -sv || true
