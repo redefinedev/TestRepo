@@ -1,9 +1,5 @@
 name: pytest with redefine
 on:
-  pull_request:
-  push:
-    branches-ignore:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -17,8 +13,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-          # ssh key is for private submodules
-          ssh-key: ${{ secrets.CI_SSH_KEY }}
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -27,7 +21,6 @@ jobs:
       - name: Install pytest
         run: |
           pip install pytest
-      # Test python
       - name: Test pytest with redefine
         run: |
           git checkout --quiet feature/pytests_for_e2e
