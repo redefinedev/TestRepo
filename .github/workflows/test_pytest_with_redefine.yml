@@ -44,19 +44,3 @@ jobs:
           chmod u+x /tmp/redefine_installation; \
           /tmp/redefine_installation
           pytest -sv || true
-          cat /tmp/coyote.log
-          grep -i -F "dune client sending data" "/tmp/coyote.log"
-          if [ -z $(grep -i -q -F "dune client sending data" "/tmp/coyote.log") ]; 
-          then
-            echo "coyote processing success";
-          else
-            echo "coyote processing failed. check logs";
-            exit 1;
-          fi
-          if [ ! -z $(grep -i -q -F "Failed sending git changes to Dune" "/tmp/coyote.log") ]; 
-          then
-            echo "coyote failed to send to dune. check logs";
-            exit 1;
-          else
-            echo "coyote success. sent to dune";
-          fi
