@@ -28,12 +28,12 @@ jobs:
         run: |
           pip install pytest
       # Test python
-      - name: Test with pytest
+      - name: Test pytest with redefine
         run: |
           echo ${GITHUB_REF_NAME}
-          git checkout feature/pytests_for_e2e
-          git checkout MergeBaseTestBase
-          git checkout -
+          git checkout --quiet feature/pytests_for_e2e
+          git checkout --quiet MergeBaseTestBase
+          git checkout --quiet -
           export GITHUB_BASE_REF="MergeBaseTestBase"; \
           export GITHUB_HEAD_REF="feature/pytests_for_e2e"; \
           export REDEFINE_COYOTE_GIT_PATH=${{ github.workspace }}
