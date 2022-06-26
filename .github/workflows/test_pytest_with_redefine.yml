@@ -30,7 +30,6 @@ jobs:
       # Test python
       - name: Test pytest with redefine
         run: |
-          echo ${GITHUB_REF_NAME}
           git checkout --quiet feature/pytests_for_e2e
           git checkout --quiet MergeBaseTestBase
           git checkout --quiet -
