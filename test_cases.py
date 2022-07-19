@@ -1,4 +1,5 @@
 import pytest
+import redefine
 
 def test_passes():
   pass
