@@ -1,0 +1,3 @@
+require:
+        #- "/home/britt/projects/bernese/.redefine_artifacts/redefine_artifacts/mocha_rr/build/RootHook.js"
+        - '/home/britt/projects/bernese/bernese/agents/road_runner/mocha_cypress_js/rr_package/build/RootHook.js'
