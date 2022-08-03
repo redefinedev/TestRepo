@@ -1,9 +1,10 @@
 package calculator
 
 import (
+	"testing"
+
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/suite"
-	"testing"
 )
 
 type CalculatorTestSuite struct {
@@ -21,10 +22,6 @@ func (m *MockCalculator) Add(a, b int) int {
 
 func TestSkip(t *testing.T) {
 	t.Skip()
-}
-
-func TestFail(t *testing.T) {
-	t.Errorf("failed")
 }
 
 func TestAdd(t *testing.T) {
