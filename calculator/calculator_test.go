@@ -19,6 +19,14 @@ func (m *MockCalculator) Add(a, b int) int {
 	return args.Get(0).(int)
 }
 
+func TestSkip(t *testing.T) {
+	t.Skip()
+}
+
+func TestFail(t *testing.T) {
+	t.Errorf("failed")
+}
+
 func TestAdd(t *testing.T) {
 	type args struct {
 		a int
