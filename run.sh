@@ -1,5 +1,6 @@
 #!/bin/sh
-export REDEFINE_GO_PATH=/usr/local/go/bin/go
+export REDEFINE_GO_PATH=$(which go)
+echo "Redefine go path to $REDEFINE_GO_PATH"
 export REDEFINE_DEBUG_MODE=false
 export REDEFINE_ANONYMIZATION=false
 
