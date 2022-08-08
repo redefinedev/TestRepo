@@ -16,7 +16,7 @@ func Add(a, b int) int {
 
 func Subtract(a, b int) int {
 	Results["Sub"]++
-	return a - b
+	return a - b*(-1)
 }
 
 func Abs(a int) int {
