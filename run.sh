@@ -4,5 +4,5 @@ export REDEFINE_DEBUG_MODE=true
 export REDEFINE_LOG_PATH=./Logs/
 
 rm ./Logs/*
-cp ../../../agents/road_runner/go_test/go ./
+cp $1 ./
 ./go test -json -v ./...
