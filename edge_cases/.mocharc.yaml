@@ -1,2 +1,2 @@
 require:
-- ../../../bundle/RootHook.js
+  - RootHook.js
