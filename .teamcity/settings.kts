@@ -32,6 +32,7 @@ project {
 
     buildType(Build)
     buildType(RedefineTest)
+    buildType(DockerTest)
 }
 
 object Build : BuildType({
@@ -78,6 +79,24 @@ object Build : BuildType({
             command = pytest {
             }
         }
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object DockerTest : BuildType({
+    name = "Docker test"
+
+    vcs {
+        root(DslContext.settingsRoot)
     }
 
     triggers {
