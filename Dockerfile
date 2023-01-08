@@ -16,6 +16,7 @@ ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
+RUN git clone -q https://github.com/redefinedev/TestRepo -b feature/pytests_for_teamcity /project
 WORKDIR /project
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
@@ -23,10 +24,10 @@ COPY ./* /project/
 RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 
 
-# run installer, need configuration via env or the code itself with config
-ENTRYPOINT [ "/entrypoint_script_folder/installer_docker_entrypoint.sh" ]
-# set the default source branch argument for the script
-CMD ["-s", "feature/pytests_for_teamcity"]
+# # run installer, need configuration via env or the code itself with config
+# ENTRYPOINT [ "/entrypoint_script_folder/installer_docker_entrypoint.sh" ]
+# # set the default source branch argument for the script
+# CMD ["-s", "feature/pytests_for_teamcity"]
 
 RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
 
