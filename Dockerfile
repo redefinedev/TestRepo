@@ -11,7 +11,7 @@ ENV TEAMCITY_PROJECT_NAME=%system.teamcity.projectName%
 ENV TEAMCITY_BUILD_NUMBER=%system.build.number%
 ENV TEAMCITY_BUILD_CONF_NAME=%system.teamcity.buildConfName%
 ENV TEAMCITY_BUILD_BRANCH=%teamcity.build.branch%
-ENV TEAMCITY_CHECKOUT_DIR="TestRepo"
+ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 
 RUN mkdir /entrypoint_script_folder
 
