@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -97,6 +98,18 @@ object DockerTest : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+
+    steps {
+        dockerCommand {
+            name = "Run docker test"
+            commandType = build {
+                source = file {
+                    path = "./Dockerfile"
+                }
+                commandArgs = "--pull"
+            }
+        }
     }
 
     triggers {
