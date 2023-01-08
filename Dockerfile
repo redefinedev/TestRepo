@@ -6,7 +6,6 @@ ENV POETRY_DYNAMIC_VERSIONING_BYPASS=$POETRY_DYNAMIC_VERSIONING_BYPASS
 ENV REDEFINE_ENVIRONMENT="dev"
 ENV REDEFINE_AUTH="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-8c5f3f124606"
 
-RUN mkdir /redefine_artifacts
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
@@ -20,3 +19,5 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 ENTRYPOINT [ "/entrypoint_script_folder/installer_docker_entrypoint.sh" ]
 # set the default source branch argument for the script
 CMD ["-s", "feature/pytests_for_teamcity"]
+
+RUN pytest 
