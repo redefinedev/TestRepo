@@ -12,7 +12,7 @@ RUN mkdir /project
 WORKDIR /project
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
-COPY ./* /project
+COPY ./* /project/
 RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 
 
