@@ -16,7 +16,7 @@ ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
-RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity /project/
+RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity
 WORKDIR /project
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
