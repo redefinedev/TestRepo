@@ -109,7 +109,7 @@ object DockerTest : BuildType({
                     path = "./Dockerfile"
                 }
                 platform = DockerCommandStep.ImagePlatform.Linux
-                namesAndTags = "pytest for teamcity"
+                namesAndTags = "pytest_for_teamcity"
                 commandArgs = "--pull"
             }
         }
