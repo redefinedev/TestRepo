@@ -20,8 +20,6 @@ WORKDIR /project
 
 RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity
 
-RUN ll 
-
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
 COPY ./* /project/
 RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
