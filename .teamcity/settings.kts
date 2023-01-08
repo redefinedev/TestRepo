@@ -110,7 +110,7 @@ object DockerTest : BuildType({
                 }
                 platform = DockerCommandStep.ImagePlatform.Linux
                 namesAndTags = "pytest_for_teamcity"
-                commandArgs = "--pull"
+                commandArgs = "--pull --env TEAMCITY_PROJECT_NAME=%system.teamcity.projectName% --env TEAMCITY_BUILD_NUMBER=%system.build.number% --env TEAMCITY_BUILD_CONF_NAME=%system.teamcity.buildConfName% --env TEAMCITY_BUILD_BRANCH=%teamcity.build.branch%"
             }
         }
     }
