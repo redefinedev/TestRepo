@@ -19,3 +19,10 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 ENTRYPOINT [ "/entrypoint_script_folder/installer_docker_entrypoint.sh" ]
 # set the default source branch argument for the script
 CMD ["-s", "feature/pytests_for_teamcity"]
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN ["redefine", "config", "set", "certpath="""]
+RUN ["redefine", "start", "--verbose", "--collect-only", "pytest"]
+
+RUN ["pytest", "-v"]
