@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
@@ -107,6 +108,7 @@ object DockerTest : BuildType({
                 source = file {
                     path = "./Dockerfile"
                 }
+                platform = DockerCommandStep.ImagePlatform.Linux
                 commandArgs = "--pull"
             }
         }
