@@ -6,6 +6,13 @@ ENV POETRY_DYNAMIC_VERSIONING_BYPASS=$POETRY_DYNAMIC_VERSIONING_BYPASS
 ENV REDEFINE_ENVIRONMENT="dev"
 ENV REDEFINE_AUTH="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-8c5f3f124606"
 
+ENV TEAMCITY_VERSION="%system.teamcity.version%"
+ENV TEAMCITY_PROJECT_NAME=%system.teamcity.projectName%
+ENV TEAMCITY_BUILD_NUMBER=%system.build.number%
+ENV TEAMCITY_BUILD_CONF_NAME=%system.teamcity.buildConfName%
+ENV TEAMCITY_BUILD_BRANCH=%teamcity.build.branch%
+ENV TEAMCITY_CHECKOUT_DIR=%system.teamcity.build.checkoutDir%
+
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
