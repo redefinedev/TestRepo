@@ -21,19 +21,12 @@ pip install -q pytest
 export REDEFINE_AUTH="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-8c5f3f124606"
 pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
 
-redefine config set cert_path="" 
-redefine start --verbose --collect-only
-
 # for logger use for python components tests
 touch /project/TestRepo/.env.development
 echo 'REDEFINE_ENVIRONMENT="dev"' >> /project/TestRepo/.env.development
 echo 'REDEFINE_AUTH="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-8c5f3f124606"' >> /project/TestRepo/.env.development
 
 # used as a marker to indicate that the container is ready
-echo "running pytest:"
-
-pytest /project/TestRepo
-
 cat /tmp/coyote.log
 
 # a docker container exits after the entrypoint script finishes
