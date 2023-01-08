@@ -24,6 +24,6 @@ CMD ["-s", "feature/pytests_for_teamcity"]
 RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
 
 RUN redefine config set cert_path=""
-RUN redefine start --verbose --collect-only pytest
+RUN redefine start --verbose --collect-only --pytest
 
-RUN ["pytest", "-v"]
+RUN pytest -sv /project/TestRepo
