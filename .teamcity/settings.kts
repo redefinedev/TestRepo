@@ -112,6 +112,13 @@ object DockerTest : BuildType({
                 commandArgs = "--pull"
             }
         }
+        dockerCommand {
+            commandType = build {
+                source = file {
+                    path = "Dockerfile"
+                }
+            }
+        }
     }
 
     triggers {
