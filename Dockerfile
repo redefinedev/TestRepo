@@ -11,12 +11,12 @@ ENV TEAMCITY_PROJECT_NAME=%system.teamcity.projectName%
 ENV TEAMCITY_BUILD_NUMBER=%system.build.number%
 ENV TEAMCITY_BUILD_CONF_NAME=%system.teamcity.buildConfName%
 ENV TEAMCITY_BUILD_BRANCH=%teamcity.build.branch%
-ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
+ENV TEAMCITY_CHECKOUT_DIR="TestRepo"
 
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
-RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity /project
+RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity /project/
 WORKDIR /project
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
@@ -30,6 +30,7 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 # CMD ["-s", "feature/pytests_for_teamcity"]
 
 RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
+RUN pip install pytest
 
 RUN redefine config set cert_path=""
 RUN redefine start --verbose --collect-only --pytest
