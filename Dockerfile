@@ -40,6 +40,6 @@ RUN pip install pytest
 # RUN redefine config set cert_path=""
 # RUN redefine start --verbose --collect-only --pytest
 
-RUN redefine verfiy
+RUN redefine verify
 
 RUN pytest -sv /project/TestRepo
