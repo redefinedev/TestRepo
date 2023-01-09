@@ -37,7 +37,9 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
 RUN pip install pytest
 
-RUN redefine config set cert_path=""
-RUN redefine start --verbose --collect-only --pytest
+# RUN redefine config set cert_path=""
+# RUN redefine start --verbose --collect-only --pytest
+
+RUN redefine verfiy
 
 RUN pytest -sv /project/TestRepo
