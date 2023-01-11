@@ -1,4 +1,4 @@
-FROM python:3.7.10 as test-repo
+FROM python:3.6.9 as test-repo
 
 ARG POETRY_DYNAMIC_VERSIONING_BYPASS="0.0.0"
 ARG TEAMCITY_PROJECT_NAME
@@ -37,7 +37,10 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 # CMD ["-s", "feature/pytests_for_teamcity"]
 
 RUN pip install redefine-cli==0.10.240 --extra-index-url=https://redefine.dev/pip/
-RUN pip install pytest
+RUN pip install pytest=6.2.5
+RUN pip install timeout=2.1.0
+RUN pip install rerunfailures=10.2 
+RUN pip install flaky=3.7.0
 
 # RUN redefine config set cert_path=""
 # RUN redefine start --verbose --collect-only --pytest
