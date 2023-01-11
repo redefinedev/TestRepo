@@ -36,7 +36,7 @@ RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 # # set the default source branch argument for the script
 # CMD ["-s", "feature/pytests_for_teamcity"]
 
-RUN pip install redefine-cli==0.10.240 --extra-index-url=https://redefine.dev/pip/
+RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
 RUN pip install pytest=6.2.5
 RUN pip install timeout=2.1.0
 RUN pip install rerunfailures=10.2 
