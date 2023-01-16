@@ -11,7 +11,7 @@
   <param name="teamcity:branchSpec" value="+:refs/heads/*" />
   <param name="teamcitySshKey" value="TC for github" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
-  <param name="useAlternates" value="USE_MIRRORS" />
+  <param name="useAlternates" value="AUTO" />
   <param name="username" value="git" />
   <param name="usernameStyle" value="USERID" />
 </vcs-root>
