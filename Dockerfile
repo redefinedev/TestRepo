@@ -28,7 +28,9 @@ RUN echo $TEAMCITY_CHECKOUT_DIR
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
-WORKDIR /project
+WORKDIR /
+
+RUN ls .
 
 COPY ./* /project/
 RUN ls -a /project
