@@ -27,6 +27,7 @@
     <vcs-settings>
       <vcs-entry-ref root-id="TestRepo_Main">
         <checkout-rule rule="+:refs/heads/main" />
+        <checkout-rule rule="+:refs/heads/pytest_for_teamcity" />
       </vcs-entry-ref>
     </vcs-settings>
     <requirements />
