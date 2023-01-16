@@ -9,6 +9,7 @@
   <param name="secure:password" value="" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec"><![CDATA[+:refs/heads/(main)
++:refs/heads/(pytest_for_teamcity)
 +:refs/remotes/(*/main)
 +:refs/remotes/(*/pytest_for_teamcity)]]></param>
   <param name="teamcitySshKey" value="TC for github" />
