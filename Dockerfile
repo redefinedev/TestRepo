@@ -55,7 +55,7 @@ RUN pip install flaky==3.7.0
 RUN git branch -a
 RUN ls -a .git/refs/*/
 
-RUN redefine config set cert_path="" source_branch="pytest_for_teamcity" 
+RUN redefine config set cert_path=""
 RUN redefine start --collect-only --verbose --pytest
 
-RUN pytest -sv 
+RUN pytest -sv .
