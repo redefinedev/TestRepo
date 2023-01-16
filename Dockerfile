@@ -16,6 +16,9 @@ ENV TEAMCITY_BUILD_NUMBER=$TEAMCITY_BUILD_NUMBER
 ENV TEAMCITY_BUILD_CONF_NAME=$TEAMCITY_BUILD_CONF_NAME
 ENV TEAMCITY_BUILD_BRANCH=$TEAMCITY_BUILD_BRANCH
 ENV TEAMCITY_VERSION=$TEAMCITY_VERSION
+ENV REDEFINE_ENVIRONMENT="dev"
+
+ENV REDEFINE_AUT="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-8c5f3f124606" 
 
 ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 
@@ -28,6 +31,8 @@ RUN git clone -q https://github.com/redefinedev/TestRepo -b pytest_for_teamcity
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
 COPY ./* /project/
+RUN mkdir /redefine
+COPY redefine/* /redefine/
 RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
 
 
@@ -46,6 +51,9 @@ RUN pip install flaky==3.7.0
 # RUN redefine config set cert_path=""
 # RUN redefine start --verbose --collect-only --pytest
 
-RUN redefine verify 
+RUN python --version
+
+RUN redefine config set cert_path="" 
+RUN redefine start --collect-only --verbose --pytest
 
 RUN pytest -sv /project/TestRepo
