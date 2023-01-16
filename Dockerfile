@@ -30,7 +30,7 @@ RUN mkdir /entrypoint_script_folder
 RUN mkdir /project
 WORKDIR /project
 
-COPY ${TEAMCITY_CHECKOUT_DIR}/* /project/ 
+COPY ${TEAMCITY_CHECKOUT_DIR} /project/ 
 RUN ls -a /project
 
 # RUN git clone https://github.com/redefinedev/TestRepo 
