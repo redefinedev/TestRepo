@@ -58,4 +58,4 @@ RUN ls -a .git/refs/*/
 RUN redefine config set cert_path="" source_branch="pytest_for_teamcity" 
 RUN redefine start --collect-only --verbose --pytest
 
-RUN pytest -sv /project/TestRepo
+RUN pytest -sv 
