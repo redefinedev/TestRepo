@@ -3,6 +3,10 @@
   <name>Build</name>
   <description />
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_AGENT" />
+      <option name="cleanBuild" value="true" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_8" name="setting container" type="simpleRunner">
