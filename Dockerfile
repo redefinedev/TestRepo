@@ -22,6 +22,8 @@ ENV REDEFINE_AUT="6a71bb1b-fdd6-4f1b-94e9-08e64a3ee537::0e6e3a6e-1071-4a95-9467-
 
 ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 
+RUN ls -a .
+
 RUN mkdir /entrypoint_script_folder
 
 RUN mkdir /project
