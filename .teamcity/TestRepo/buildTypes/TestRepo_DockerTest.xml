@@ -25,7 +25,9 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="TestRepo_Main" />
+      <vcs-entry-ref root-id="TestRepo_Main">
+        <checkout-rule rule="+:refs/heads/main" />
+      </vcs-entry-ref>
     </vcs-settings>
     <requirements />
     <build-triggers>
