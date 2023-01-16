@@ -24,7 +24,7 @@ ENV TEAMCITY_CHECKOUT_DIR="/project/TestRepo"
 
 RUN ls -a .
 
-RUN ls -a /home/nitay/downloads/TeamCity/buildAgent/work/59f0207e49b3ab4c
+RUN ls -a /home
 
 RUN mkdir /entrypoint_script_folder
 
