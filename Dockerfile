@@ -30,10 +30,7 @@ RUN mkdir /entrypoint_script_folder
 RUN mkdir /project
 WORKDIR /
 
-RUN ls .
-
 COPY . /project/
-RUN ls -a /project
 
 WORKDIR /project
 
@@ -48,22 +45,17 @@ WORKDIR /project
 # # set the default source branch argument for the script
 # CMD ["-s", "feature/pytests_for_teamcity"]
 
-# RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
-# RUN pip install setuptools
-# RUN pip install pytest==6.2.5
-# RUN pip install pytest-timeout==2.1.0
-# RUN pip install pytest-rerunfailures==10.2 
-# RUN pip install flaky==3.7.0
+RUN pip install redefine-cli --extra-index-url=https://redefine.dev/pip/
+RUN pip install setuptools
+RUN pip install pytest==6.2.5
+RUN pip install pytest-timeout==2.1.0
+RUN pip install pytest-rerunfailures==10.2 
+RUN pip install flaky==3.7.0
 
 RUN git branch -a
 RUN ls -a .git/refs/*/
 
-# RUN redefine config set cert_path=""
-# RUN redefine start --verbose --collect-only --pytest
+RUN redefine config set cert_path="" source_branch="pytest_for_teamcity" 
+RUN redefine start --collect-only --verbose --pytest
 
-# RUN python --version
-
-# RUN redefine config set cert_path="" source_branch="pytest_for_teamcity" 
-# RUN redefine start --collect-only --verbose --pytest
-
-# RUN pytest -sv /project/TestRepo
+RUN pytest -sv /project/TestRepo
