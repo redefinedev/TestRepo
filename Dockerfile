@@ -59,3 +59,5 @@ RUN redefine config set cert_path=""
 RUN redefine start --collect-only --verbose --pytest
 
 RUN pytest -sv .
+
+RUN cat /tmp/coyote.log
