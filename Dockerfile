@@ -32,7 +32,7 @@ WORKDIR /
 
 RUN ls .
 
-COPY ./* /project/
+COPY . /project/
 RUN ls -a /project
 RUN ls -a /project/branches
 
