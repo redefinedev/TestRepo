@@ -55,7 +55,6 @@ WORKDIR /project
 # RUN pip install pytest-rerunfailures==10.2 
 # RUN pip install flaky==3.7.0
 
-RUN git checkout main
 RUN git branch -a
 RUN ls .git/refs/*/ -a
 
