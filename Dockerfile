@@ -34,7 +34,7 @@ RUN ls .
 
 COPY ./* /project/
 RUN ls -a /project
-RUN ls -a /project/TestRepo
+RUN ls -a /project/branches
 
 # RUN git clone https://github.com/redefinedev/TestRepo 
 # WORKDIR /project/TestRepo
