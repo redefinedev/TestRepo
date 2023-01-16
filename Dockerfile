@@ -56,7 +56,7 @@ WORKDIR /project
 # RUN pip install flaky==3.7.0
 
 RUN git branch -a
-RUN ls .git/refs/*/ -a
+RUN ls -a .git/refs/*/
 
 # RUN redefine config set cert_path=""
 # RUN redefine start --verbose --collect-only --pytest
