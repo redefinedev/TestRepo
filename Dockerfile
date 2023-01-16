@@ -25,8 +25,6 @@ ENV TEAMCITY_CHECKOUT_DIR="/project"
 
 RUN echo $TEAMCITY_CHECKOUT_DIR
 
-RUN mkdir /entrypoint_script_folder
-
 RUN mkdir /project
 WORKDIR /
 
@@ -52,8 +50,9 @@ RUN pip install pytest-timeout==2.1.0
 RUN pip install pytest-rerunfailures==10.2 
 RUN pip install flaky==3.7.0
 
+
 RUN git branch -a
-RUN ls -a .git/refs/*/
+RUN ls -a .git/refs/
 
 RUN redefine config set cert_path=""
 RUN redefine start --collect-only --verbose --pytest
