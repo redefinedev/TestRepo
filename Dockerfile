@@ -28,8 +28,9 @@ RUN mkdir /project
 WORKDIR /project
 
 RUN git clone https://github.com/redefinedev/TestRepo 
-RUN cd ./TestRepo && ls -a .
-RUN cd ./TestRepo && git checkout pytest_for_teamcity
+WORKDIR /project/TestRepo
+RUN ls -a .
+RUN git checkout pytest_for_teamcity
 
 COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
 COPY ./* /project/
