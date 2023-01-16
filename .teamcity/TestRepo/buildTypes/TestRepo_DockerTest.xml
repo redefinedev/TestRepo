@@ -4,6 +4,7 @@
   <description />
   <settings>
     <options>
+      <option name="checkoutMode" value="ON_AGENT" />
       <option name="cleanBuild" value="true" />
       <option name="excludeDefaultBranchChanges" value="true" />
     </options>
@@ -24,7 +25,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="TestRepo_GitGithubComRedefinedevTestRepoGitRefsHeadsPytestForTeamcity" />
+      <vcs-entry-ref root-id="TestRepo_Main" />
     </vcs-settings>
     <requirements />
     <build-triggers>
