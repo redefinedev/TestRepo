@@ -32,6 +32,9 @@ COPY . /project/
 
 WORKDIR /project
 
+RUN git branch -a
+RUN ls -R .git/refs/*/ -a
+
 # RUN git clone https://github.com/redefinedev/TestRepo 
 # WORKDIR /project/TestRepo
 # RUN ls -a .
@@ -49,10 +52,6 @@ RUN pip install pytest==6.2.5
 RUN pip install pytest-timeout==2.1.0
 RUN pip install pytest-rerunfailures==10.2 
 RUN pip install flaky==3.7.0
-
-
-RUN git branch -a
-RUN ls -R .git/refs/*/ -a
 
 RUN redefine config set cert_path=""
 RUN redefine start --collect-only --verbose --pytest
