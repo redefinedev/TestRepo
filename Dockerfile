@@ -46,12 +46,15 @@ RUN pip install pytest-timeout==2.1.0
 RUN pip install pytest-rerunfailures==10.2 
 RUN pip install flaky==3.7.0
 
+RUN git branch -a
+RUN ls .git/refs/*/ -a
+
 # RUN redefine config set cert_path=""
 # RUN redefine start --verbose --collect-only --pytest
 
 RUN python --version
 
-RUN redefine config set cert_path="" 
+RUN redefine config set cert_path="" source_branch="pytest_for_teamcity" 
 RUN redefine start --collect-only --verbose --pytest
 
 RUN pytest -sv /project/TestRepo
