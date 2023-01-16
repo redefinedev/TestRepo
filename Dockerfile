@@ -51,8 +51,9 @@ RUN pip install pytest-rerunfailures==10.2
 RUN pip install flaky==3.7.0
 
 
+RUN git fetch --all
 RUN git branch -a
-RUN ls -a .git/refs/
+RUN ls -a .git/refs/*
 
 RUN redefine config set cert_path=""
 RUN redefine start --collect-only --verbose --pytest
