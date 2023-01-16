@@ -11,7 +11,8 @@
     <build-runners>
       <runner id="RUNNER_1" name="Run docker test" type="DockerCommand">
         <parameters>
-          <param name="command.args" value="--build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%%%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%%'" />
+          <param name="command.args"><![CDATA[--build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%%%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%%'
+--build-arg TEAMCITY_CHECKOUT_DIR='%system.teamcity.build.checkoutDir%']]></param>
           <param name="docker.command.type" value="build" />
           <param name="docker.image.namesAndTags" value="pytest_for_teamcity" />
           <param name="docker.push.remove.image" value="true" />
