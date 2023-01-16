@@ -35,6 +35,8 @@ RUN ls .
 COPY . /project/
 RUN ls -a /project
 
+WORKDIR /project
+
 # RUN git clone https://github.com/redefinedev/TestRepo 
 # WORKDIR /project/TestRepo
 # RUN ls -a .
@@ -53,6 +55,7 @@ RUN ls -a /project
 # RUN pip install pytest-rerunfailures==10.2 
 # RUN pip install flaky==3.7.0
 
+RUN git fetch origin main
 RUN git branch -a
 RUN ls .git/refs/*/ -a
 
