@@ -40,6 +40,17 @@ docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.t
           <param name="teamcity.perfmon.feature.enabled" value="true" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_2" type="pullRequests">
+        <parameters>
+          <param name="authenticationType" value="token" />
+          <param name="filterAuthorRole" value="MEMBER" />
+          <param name="filterSourceBranch" value="refs/heads/pytest_for_teamcity" />
+          <param name="filterTargetBranch" value="refs/heads/maib" />
+          <param name="providerType" value="github" />
+          <param name="secure:accessToken" value="credentialsJSON:f58008cc-4f7d-4101-a6bf-f3cea1016590" />
+          <param name="vcsRootId" value="TestRepo_GitGithubComRedefinedevTestRepoGitPytestForTeamcity" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
