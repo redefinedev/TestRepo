@@ -28,7 +28,7 @@ docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.t
     <build-triggers>
       <build-trigger id="TRIGGER_3" type="vcsTrigger">
         <parameters>
-          <param name="branchFilter" value="+:refs/pulls/*" />
+          <param name="branchFilter" value="+:refs/pull/*" />
           <param name="enableQueueOptimization" value="true" />
           <param name="quietPeriodMode" value="DO_NOT_USE" />
         </parameters>

@@ -8,7 +8,7 @@
   <param name="ignoreKnownHosts" value="true" />
   <param name="secure:password" value="" />
   <param name="submoduleCheckout" value="CHECKOUT" />
-  <param name="teamcity:branchSpec"><![CDATA[+:refs/pull/*/merge
+  <param name="teamcity:branchSpec"><![CDATA[+:refs/pull/*
 -:refs/heads/*]]></param>
   <param name="teamcitySshKey" value="TC for github" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
