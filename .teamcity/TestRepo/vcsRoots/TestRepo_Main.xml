@@ -15,7 +15,7 @@
 +:refs/pulls/(*/head)]]></param>
   <param name="teamcitySshKey" value="gerev" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
-  <param name="useAlternates" value="USE_MIRRORS" />
+  <param name="useAlternates" value="NO_MIRRORS" />
   <param name="username" value="git" />
   <param name="usernameStyle" value="USERID" />
 </vcs-root>
