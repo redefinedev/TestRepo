@@ -65,3 +65,11 @@ RUN redefine start --collect-only --verbose --pytest
 RUN pytest -sv .
 
 RUN cat /tmp/coyote.log
+
+RUN mkdir /redefine_artifacts
+RUN mkdir /entrypoint_script_folder
+COPY installer_docker_entrypoint.sh /entrypoint_script_folder/installer_docker_entrypoint.sh
+RUN chmod +x /entrypoint_script_folder/installer_docker_entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint_script_folder/installer_docker_entrypoint.sh" ]
+
