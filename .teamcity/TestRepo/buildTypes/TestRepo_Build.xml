@@ -45,10 +45,10 @@ docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.t
         <parameters>
           <param name="authenticationType" value="token" />
           <param name="filterAuthorRole" value="EVERYBODY" />
-          <param name="filterSourceBranch" value="refs/heads/pytest_for_teamcity" />
-          <param name="filterTargetBranch" value="refs/heads/main" />
+          <param name="filterSourceBranch" value="pytest_for_teamcity" />
+          <param name="filterTargetBranch" value="main" />
           <param name="providerType" value="github" />
-          <param name="secure:accessToken" value="credentialsJSON:4a5b84ea-ecc4-4ffc-8f11-6ec8c361ce19" />
+          <param name="secure:accessToken" value="credentialsJSON:fc37c32b-d4e1-4d6e-b6d0-5cb64e86a463" />
           <param name="vcsRootId" value="TestRepo_GitGithubComRedefinedevTestRepoGitPytestForTeamcity" />
         </parameters>
       </extension>
