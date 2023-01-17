@@ -4,6 +4,7 @@
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="ALWAYS" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
+<<<<<<< HEAD
   <param name="branch" value="pytest_for_teamcity" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="reportTagRevisions" value="true" />
@@ -11,6 +12,13 @@
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec"><![CDATA[+:refs/(*main)
 +:refs/(*pytest_for_teamcity)]]></param>
+=======
+  <param name="branch" value="main" />
+  <param name="ignoreKnownHosts" value="true" />
+  <param name="secure:password" value="" />
+  <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="teamcity:branchSpec" value="+:refs/heads/*" />
+>>>>>>> main
   <param name="teamcitySshKey" value="TC for github" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
   <param name="useAlternates" value="USE_MIRRORS" />
