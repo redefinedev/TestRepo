@@ -10,7 +10,8 @@
   <param name="secure:password" value="" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec"><![CDATA[+:refs/(*main)
-+:refs/(*pytest_for_teamcity)]]></param>
++:refs/(*pytest_for_teamcity)
++:refs/pulls/*]]></param>
   <param name="teamcitySshKey" value="gerev" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
   <param name="useAlternates" value="USE_MIRRORS" />
