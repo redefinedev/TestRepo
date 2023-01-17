@@ -4,7 +4,7 @@
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="NEVER" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
-  <param name="branch" value="refs/heads/main" />
+  <param name="branch" value="main" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="secure:password" value="" />
   <param name="submoduleCheckout" value="CHECKOUT" />
