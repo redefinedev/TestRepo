@@ -15,7 +15,7 @@
 git fetch --all 
 git fetch origin %teamcity.build.branch%
 
-docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%' --build-arg TEAMCITY_CHECKOUT_DIR='%system.teamcity.build.checkoutDir%' --build-arg TEAMCITY_BUILD_COMMIT='%build.vcs.number%' -f Dockerfile .]]></param>
+docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%' --build-arg TEAMCITY_CHECKOUT_DIR='%system.teamcity.build.checkoutDir%' --build-arg TEAMCITY_BUILD_COMMIT='%build.vcs.number%' --build-arg TEAMCITY_PULLREQUEST_SOURCE_BRANCH='%teamcity.pullRequest.source.branch%' -f Dockerfile .]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
@@ -28,7 +28,8 @@ docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.t
     <build-triggers>
       <build-trigger id="TRIGGER_3" type="vcsTrigger">
         <parameters>
-          <param name="branchFilter" value="+:*" />
+          <param name="branchFilter"><![CDATA[+:*
+-:refs/heads/*]]></param>
           <param name="enableQueueOptimization" value="true" />
           <param name="quietPeriodMode" value="DO_NOT_USE" />
         </parameters>
@@ -43,11 +44,11 @@ docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.t
       <extension id="BUILD_EXT_2" type="pullRequests">
         <parameters>
           <param name="authenticationType" value="token" />
-          <param name="filterAuthorRole" value="MEMBER" />
-          <param name="filterSourceBranch" value="refs/heads/pytest_for_teamcity" />
-          <param name="filterTargetBranch" value="refs/heads/maib" />
+          <param name="filterAuthorRole" value="EVERYBODY" />
+          <param name="filterSourceBranch" value="pytest_for_teamcity" />
+          <param name="filterTargetBranch" value="main" />
           <param name="providerType" value="github" />
-          <param name="secure:accessToken" value="credentialsJSON:f58008cc-4f7d-4101-a6bf-f3cea1016590" />
+          <param name="secure:accessToken" value="credentialsJSON:fc37c32b-d4e1-4d6e-b6d0-5cb64e86a463" />
           <param name="vcsRootId" value="TestRepo_GitGithubComRedefinedevTestRepoGitPytestForTeamcity" />
         </parameters>
       </extension>
