@@ -4,11 +4,11 @@
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="NEVER" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
-  <param name="branch" value="pytest_for_teamcity" />
+  <param name="branch" value="refs/heads/main" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="secure:password" value="" />
   <param name="submoduleCheckout" value="CHECKOUT" />
-  <param name="teamcity:branchSpec" value="+:refs/pull/*/head" />
+  <param name="teamcity:branchSpec" value="+:refs/pull/*" />
   <param name="teamcitySshKey" value="TC for github" />
   <param name="url" value="git@github.com:redefinedev/TestRepo.git" />
   <param name="useAlternates" value="AUTO" />
