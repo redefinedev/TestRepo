@@ -15,7 +15,7 @@
 git fetch --all 
 git fetch origin %teamcity.build.branch%
 
-docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%' --build-arg TEAMCITY_CHECKOUT_DIR='%system.teamcity.build.checkoutDir%' --build-arg TEAMCITY_BUILD_COMMIT='%build.vcs.number%' -f Dockerfile .]]></param>
+docker build -t pytest_for_teamcity --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_BUILD_NUMBER='%system.build.number%' --build-arg TEAMCITY_BUILD_CONF_NAME='%system.teamcity.buildConfName%' --build-arg TEAMCITY_BUILD_BRANCH='%teamcity.build.branch%' --build-arg TEAMCITY_PROJECT_NAME='%system.teamcity.projectName%' --build-arg TEAMCITY_VERSION='%system.teamcity.version%' --build-arg TEAMCITY_CHECKOUT_DIR='%system.teamcity.build.checkoutDir%' --build-arg TEAMCITY_BUILD_COMMIT='%build.vcs.number%' --build-arg TEAMCITY_PULLREQUEST_SOURCE_BRANCH='%teamcity.pullRequest.source.branch%' -f Dockerfile .]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
