@@ -1,4 +1,5 @@
 import time
+import pytest
 
 def test_1_sec_pass():
   time.sleep(1)
@@ -23,3 +24,6 @@ def test_10_seconds():
 def test_another_1_sec():
   time.sleep(1)
   assert True
+
+def test_skip():
+  pytest.skip()
