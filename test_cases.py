@@ -1,7 +1,13 @@
 import time
 import pytest
 
-def test_1_sec_pass():
+@pytest.fixture(scope="function")
+def sleep_fixture():
+  print("in fixture")
+  time.sleep(1)
+
+
+def test_1_sec_pass(sleep_fixture):
   time.sleep(1)
   assert True
 
