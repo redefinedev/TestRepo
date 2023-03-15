@@ -33,3 +33,7 @@ def test_another_1_sec():
 
 def test_skip():
   pytest.skip()
+
+@pytest.mark.parametrize("number", [i for i in range(30,000)])
+def a_lot_of_tests(number):
+  assert True
