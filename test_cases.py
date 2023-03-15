@@ -4,7 +4,7 @@ import pytest
 @pytest.fixture(scope="function")
 def sleep_fixture():
   print("in fixture")
-  time.sleep(1)
+  time.sleep(3)
 
 
 def test_1_sec_pass(sleep_fixture):
