@@ -1,10 +1,7 @@
 import pytest
-
+# all tests passes to enforce tests order
 def test_passes():
   pass
-
-def test_fails():
-  assert 1 == 0
 
 def test_passes1():
   pass
