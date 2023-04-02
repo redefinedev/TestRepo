@@ -6,7 +6,7 @@ def test_pass_0():
 def test_fail_1():
   assert 1==0
 
-@pytest.mark.skip()
+@pytest.mark.skip
 def test_skip():
   pass
 
