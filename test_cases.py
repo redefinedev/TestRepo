@@ -1,25 +1,25 @@
 import pytest
 
 def pass_0():
-  assert True
+  pass
 
 def fail_0():
   assert 1==0
 
 def pass_1():
-  assert True
+  pass
 
 def fail_1():
   assert 1==0
 
 def pass_2():
-  assert True
+  pass
 
 def pass_3():
-  assert True
+  pass
 
 def pass_4():
-  assert True
+  pass
 
 def fail_2():
   assert 1==0
