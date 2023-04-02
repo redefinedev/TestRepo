@@ -10,6 +10,10 @@ def test_fail_1():
 def test_skip():
   pass
 
+@pytest.mark.xfail
+def test_must_fail():
+  pass
+
 def test_pass_2():
   pass
 
