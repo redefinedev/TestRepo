@@ -1,18 +1,11 @@
 import pytest
+import not_existing
 
-def test_pass_0():
+def test_pass_0(some_fixture):
   pass
 
 def test_fail_1():
   assert 1==0
-
-@pytest.mark.skip
-def test_skip():
-  pass
-
-@pytest.mark.xfail
-def test_must_fail():
-  pass
 
 def test_pass_2():
   pass
