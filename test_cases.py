@@ -13,3 +13,7 @@ def test_passes4():
   pass
 def test_passes5():
   pass
+
+@pytest.mark.skip
+def test_skip():
+  pass
