@@ -1,8 +1,8 @@
 collected = []
 
 
-def pytest_collection_finish(session):
-    for item in session.items:
+def pytest_collection_modifyitems(config, items):
+    for item in items:
         collected.append(item.nodeid)
 
 
