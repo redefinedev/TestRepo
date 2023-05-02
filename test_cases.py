@@ -6,16 +6,6 @@ def sleep_fixture():
   print("in fixture")
   time.sleep(3)
 
-@pytest.mark.parametrize("number", [i for i in range(20)])
-def test_1_sec_sleep_pass(number):
-    time.sleep(1)
-    assert True
-
-@pytest.mark.parametrize("number", [i for i in range(20)])
-def test_1_sec_sleep_fail(number):
-    time.sleep(1)
-    assert False
-
 def test_1_sec_pass(sleep_fixture):
   time.sleep(1)
   assert True
@@ -43,10 +33,3 @@ def test_another_1_sec():
 def test_skip():
   pytest.skip()
 
-@pytest.mark.parametrize("number", [i for i in range(30,000)])
-def a_lot_of_tests(number):
-  assert True
-
-@pytest.mark.parametrize("number", [i for i in range(20)])
-def test_1_sec_sleep(number):
-    time.sleep(1)
