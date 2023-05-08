@@ -1,7 +1,7 @@
 import pytest
 import time
 def test_pass_0():
-  sleep(2)
+  time.sleep(2)
   pass
 
 def test_fail_1():
