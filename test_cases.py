@@ -5,7 +5,7 @@ import time
 @pytest.fixture()
 def dune_args():
     print("fixture")
-    raise RuntimeError("This is an error")
+    raise BaseException("This is an error")
 
 def test_pass_0(dune_args):
   print("test_pass_0")
