@@ -2,6 +2,7 @@ import pytest
 
 @pytest.fixture(scope="function")
 def fail_fixture():
+  yield
   raise Exception("oh no some error happened")
 
 
