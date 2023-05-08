@@ -1,11 +1,11 @@
 import pytest
-
+import time
 def test_pass_0():
   pass
 
 def test_fail_1():
+  time.sleep(5)
   assert 1==0
-
 
 def test_pass_2():
   pass
