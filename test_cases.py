@@ -2,7 +2,7 @@ import pytest
 import time
 
 
-@pytest.fixture()
+@pytest.fixture(autouse=True)
 def dune_args():
     print("fixture")
     raise RuntimeError("This is an error")
