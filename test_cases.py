@@ -4,7 +4,7 @@ def test_pass_0():
   pass
 
 def test_fail_1():
-  time.sleep(5)
+  time.sleep(10)
   assert 1==0
 
 def test_pass_2():
