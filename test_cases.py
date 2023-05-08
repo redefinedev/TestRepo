@@ -4,9 +4,10 @@ import time
 
 @pytest.fixture()
 async def dune_args():
+    print("fixture")
     raise RuntimeError("This is an error")
 
-def test_pass_0():
+def test_pass_0(dune_args):
   time.sleep(2)
   pass
 
