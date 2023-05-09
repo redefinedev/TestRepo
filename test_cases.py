@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def fail_fixture():
   yield
   raise Exception("oh no some error happened")
@@ -9,14 +9,9 @@ def fail_fixture():
 def test_set_fail(fail_fixture):
   pass
 
-@pytest.mark.parametrize("i", [i for i in range(9000)])
-def test_parameter(i:int):
-  assert(i % 2 == 0)
-
-@pytest.mark.skip(reason="")
-def test_skip_1():
+def test_set_fail_1(fail_fixture):
   pass
 
-@pytest.mark.skip(reason="")
-def test_skip():
+def test_set_fail_2(fail_fixture):
   pass
+
