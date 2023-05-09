@@ -2,7 +2,7 @@ import pytest
 
 @pytest.fixture(scope="session")
 def outer_fail_fixture():
-  assert False
+  assert 1 ==2
 
 @pytest.fixture(scope="function")
 def inner_fail_fixture():
