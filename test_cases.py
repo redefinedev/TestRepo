@@ -13,7 +13,7 @@ def test_success():
 
 @pytest.mark.parametrize("i", range(10))
 def test_fail_param(i):
-    sleep(0.2)
+    sleep(0.5)
 
 
 @pytest.mark.skip
