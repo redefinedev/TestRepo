@@ -8,11 +8,12 @@ def test_fail_1():
 
 
 def test_success():
-    sleep(0.3)
+    sleep(1)
 
 
-def test_fail_2():
-    assert False
+@pytest.mark.parametrize("i", range(10))
+def test_fail_param():
+    sleep(0.2)
 
 
 @pytest.mark.skip
