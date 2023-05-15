@@ -4,8 +4,11 @@ import pytest
 
 
 def test_fail_1():
-    sleep(1)
     assert False
+
+
+def test_success():
+    sleep(1)
 
 
 def test_fail_2():
