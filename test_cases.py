@@ -3,7 +3,7 @@ from time import sleep
 import pytest
 
 
-@pytest.mark.parametrize("i", range(10))
+@pytest.mark.parametrize("i", range(2))
 def test_fail_no_sleep(i):
     assert False
 
