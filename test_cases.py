@@ -3,17 +3,15 @@ from time import sleep
 import pytest
 
 
+@pytest.mark.parametrize("i", range(10))
 def test_fail_1():
     assert False
 
 
-def test_success():
-    sleep(1)
-
-
 @pytest.mark.parametrize("i", range(10))
 def test_fail_param(i):
-    sleep(0.5)
+    sleep(1)
+    assert False
 
 
 @pytest.mark.skip
