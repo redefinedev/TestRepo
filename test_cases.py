@@ -8,7 +8,7 @@ def test_fail_1():
 
 
 def test_success():
-    sleep(1)
+    sleep(0.3)
 
 
 def test_fail_2():
