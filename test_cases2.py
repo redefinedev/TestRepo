@@ -8,10 +8,10 @@ def write(text):
 
 
 @pytest.fixture(scope="module")
-def fix_m1(self):
-    write("fix_m1")
+def fix_m2(self):
+    write("fix_m2")
 
 
 @pytest.mark.parametrize("i", range(100))
-def test_m1(self, fix_m1, i):
+def test_m2(self, fix_m2, i):
     assert True
