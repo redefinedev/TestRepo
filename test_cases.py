@@ -1,4 +1,4 @@
-""" Runs with 2 nodes. Without --dist=loadscope expects to be mixed(both fixture prints), but with --dist=loadscope it is not mixed. """
+""" Runs with 2 nodes. Without --dist=loadgroup expects to be mixed(both fixture prints), but with --dist=loadgroup it is not mixed. """
 import pytest
 
 
