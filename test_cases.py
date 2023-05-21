@@ -1,19 +1,47 @@
-from time import sleep
-
 import pytest
 
 
-@pytest.mark.parametrize("i", range(2))
-def test_fail_no_sleep(i):
-    assert False
+def write(text):
+    with open("test.txt", "a") as f:
+        f.write(text + "\n")
 
 
-@pytest.mark.parametrize("i", range(10))
-def test_fail_sleep(i):
-    sleep(1)
-    assert False
+@pytest.fixture(scope="session")
+def fix_s1():
+    write("fix_s1")
 
 
-@pytest.mark.skip
-def test_skipped():
-    assert 1 == 2
+@pytest.fixture(scope="module")
+def fix_m1():
+    write("fix_m1")
+
+
+def test_ayal():
+    write("test_ayal")
+
+
+class TestClass1:
+    @pytest.fixture
+    def fix_c1(self):
+        write("fix_c1")
+
+    def test_c11(self, fix_c1, fix_s1, fix_m1):
+        write("c11")
+
+    def test_c12(self, fix_c1, fix_s1, fix_m1):
+        write("c12")
+        assert False
+
+
+class TestClass2:
+    @pytest.fixture(scope="session")
+    def fix_c2(self):
+        write("fix_c2")
+
+    def test_c21(self, fix_c2, fix_s1, fix_m1):
+        write("c21")
+
+    def test_c22(self, fix_c2, fix_s1, fix_m1):
+        write("c22")
+        assert False
+
