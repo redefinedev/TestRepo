@@ -7,21 +7,23 @@ def write(text):
         f.write(text + "\n")
 
 
-class TestClass1:
-    @pytest.fixture(scope="class")
-    def fix_c1(self):
-        write("fix_c1")
-
-    @pytest.mark.parametrize("i", range(100))
-    def test_c11(self, fix_c1, i):
-        assert True
+@pytest.fixture(scope="module")
+def fix_g1():
+    write("fix_g1")
 
 
-class TestClass2:
-    @pytest.fixture(scope="class")
-    def fix_c2(self):
-        write("fix_c2")
+@pytest.mark.xdist_group(name="group1")
+@pytest.mark.parametrize("i", range(100))
+def test_g1(fix_g1, i):
+    assert True
 
-    @pytest.mark.parametrize("i", range(100))
-    def test_c2(self, fix_c2, i):
-        assert True
+
+@pytest.fixture(scope="module")
+def fix_g2():
+    write("fix_g2")
+
+
+@pytest.mark.xdist_group(name="group2")
+@pytest.mark.parametrize("i", range(100))
+def test_g2(fix_g2, i):
+    assert True
