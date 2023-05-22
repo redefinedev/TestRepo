@@ -5,6 +5,8 @@ module.exports = defineConfig({
     async setupNodeEvents(on, config) {
       // implement node event listeners here
       config = await require("./Redefine.js").redefinePlugin(on, config);
+      console.log("cypress spec pattern: ", config.specPattern)
+      console.log("more values ", config.specs)
       return config;
     },
   },
