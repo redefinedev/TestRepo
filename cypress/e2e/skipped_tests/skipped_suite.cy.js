@@ -1,6 +1,6 @@
 
 describe.skip("skipped suite", () => {
-    it("first test not failing", () => {
+    it("will not run", () => {
         expect(true).to.equal(true);
         cy.wait(1000);
     });
