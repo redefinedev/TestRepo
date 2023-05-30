@@ -25,7 +25,7 @@ describe('generated from a list', () => {
     // dynamically create a single test for each operation in the list
     operations.forEach((operation) => {
       // derive test name from data
-      it(`${operation.name}`, () => {
+      it(`test: ${operation.name}`, () => {
         cy.wrap(eval(operation.op)).should('equal', operation.value)
       })
     })
