@@ -1,6 +1,6 @@
 
 describe("suite with after each failure", () => {
-    afterEach(() => {
+    after(() => {
         expect(true).to.equal(false);
     });
 
