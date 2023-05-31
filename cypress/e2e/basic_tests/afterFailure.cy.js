@@ -1,4 +1,3 @@
-const { expect } = require("chai");
 
 describe("suite with after each failure", () => {
     afterEach(() => {
