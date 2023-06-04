@@ -1,32 +1,27 @@
-describe('generated from a list', () => {
-    const operations = [
-      {
-        name:"pass0",
-        op: '2 + 2',
-        value: 4,
-      },
-      {
-        name: "pass1",
-        op: '10 - 15',
-        value: -5,
-      },
-      {
-        name: "pass2",
-        op: '3 * 17',
-        value: 51,
-      },
-      {
-          name: "fails3",
-          op: '1 + 1',
-          value: 3,
-        },
-    ]
+const arrayRange = (start, stop, step) =>
+    Array.from(
+    { length: (stop - start) / step + 1 },
+    (value, index) => start + index * step
+    );
+
+describe('very long test suite', () => {
+    const operations = []
+    const indexes = arrayRange(0,9,1);
+    indexes.forEach((value) =>{
+      operations.push(
+        {
+          name: `test#${value}`,
+          value: value,
+        }
+      )
+    })
   
     // dynamically create a single test for each operation in the list
     operations.forEach((operation) => {
       // derive test name from data
-      it(`test: ${operation.name}`, () => {
-        cy.wrap(eval(operation.op)).should('equal', operation.value)
+      it(`${operation.name}`, () => {
+        // all even numbers pass, all odd ones fail
+        cy.wrap(eval(operation.value % 2)).should('equal', 0)
       })
     })
   })
