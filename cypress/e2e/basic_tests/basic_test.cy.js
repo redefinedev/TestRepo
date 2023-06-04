@@ -6,7 +6,7 @@ const arrayRange = (start, stop, step) =>
 
 describe('very long test suite', () => {
     const operations = []
-    const indexes = arrayRange(0,9,1);
+    const indexes = arrayRange(0,1000,1);
     indexes.forEach((value) =>{
       operations.push(
         {
