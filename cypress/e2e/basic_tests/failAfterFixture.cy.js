@@ -1,17 +1,17 @@
 before(function(){
-    cy.task("log", "test3 beforeAll hook")
+    cy.task("log", "test4 beforeAll hook")
 });
 beforeEach(function() {
-    cy.task("log", "test3 beforeEach hook")
+    cy.task("log", "test4 beforeEach hook")
 });
 
 describe("suite4", () => {
-    before(function(){
-        cy.task("log", "test3 beforeAll describe hook")
+    after(function(){
+        cy.task("log", "test4 after describe hook")
         expect(true).to.equal(false)
     });
     beforeEach(function() {
-        cy.task("log", "test3 beforeEach describe hook")
+        cy.task("log", "test4 beforeEach describe hook")
     });
     it("test4 pass", () => {
         expect(true).to.equal(true);
