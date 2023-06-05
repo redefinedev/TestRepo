@@ -5,7 +5,7 @@ beforeEach(function() {
     cy.task("log", "test3 beforeEach hook")
 });
 
-describe("suite4", () => {
+describe("suite3", () => {
     before(function(){
         cy.task("log", "test3 beforeAll describe hook")
         expect(true).to.equal(false)
@@ -13,7 +13,7 @@ describe("suite4", () => {
     beforeEach(function() {
         cy.task("log", "test3 beforeEach describe hook")
     });
-    it("test4 pass", () => {
+    it("test3 pass", () => {
         expect(true).to.equal(true);
     });
 });
