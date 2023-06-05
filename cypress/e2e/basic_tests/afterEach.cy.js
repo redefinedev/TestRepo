@@ -1,5 +1,3 @@
-const { afterEach } = require("mocha");
-
 
 describe("Suite with afterEach", () => {
     it("first short test", () => {
