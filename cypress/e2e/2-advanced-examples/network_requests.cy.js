@@ -1,4 +1,10 @@
 /// <reference types="cypress" />
+before(() => {
+  // after all tests in this block
+  cy.wait(1000)
+  cy.log("in before in spec not selected")
+})
+
 
 context('Network Requests', () => {
   beforeEach(() => {

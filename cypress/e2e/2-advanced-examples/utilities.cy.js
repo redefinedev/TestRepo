@@ -1,5 +1,11 @@
 /// <reference types="cypress" />
 
+after(() => {
+  // after all tests in this block
+  cy.wait(1000)
+  cy.log("in after in spec not selected")
+})
+
 context('Utilities', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/utilities')
