@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "10.11"
+    "cypress": "10.7"
   },
   "devDependencies": {
     "@cypress/grep": "^3.1.5"
