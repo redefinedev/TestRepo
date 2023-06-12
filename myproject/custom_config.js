@@ -6,5 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
       return config
     },
+    supportFile: "cypress/test/custom_support.js"
   },
 });
