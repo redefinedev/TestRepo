@@ -1,11 +1,6 @@
 import pytest
+from time import sleep
 
-def test_passes():
-  pass
-
-def test_fails():
-  assert 1 == 0
-
-@pytest.mark.skip
-def test_skipped():
-  assert 1 == 2
+@pytest.mark.parametrize("index", [i for i in range(100)])
+def test_sleep(index):
+    sleep(1)
