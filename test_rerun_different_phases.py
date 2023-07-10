@@ -22,7 +22,7 @@ def test_fails(roll):
 
 
 def test_sleep():
-    sleep(1)
+    sleep(1.2)
     assert True
 
 
