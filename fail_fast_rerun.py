@@ -22,5 +22,5 @@ def test_sleep():
 
 # post time limit tests
 @pytest.mark.parametrize("i", range(10))
-def tests_passing_post_failure():
+def tests_passing_post_failure(i):
     assert True
