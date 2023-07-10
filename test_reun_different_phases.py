@@ -17,8 +17,8 @@ def roll():
 # once on setup
 # second time on run
 def test_fails(roll):
-    if INDEX == 2:
-        assert False
+    assert False
+    
 
 
 def test_sleep():
