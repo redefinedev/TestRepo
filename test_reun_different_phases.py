@@ -1,3 +1,4 @@
+from time import sleep
 import pytest
 
 INDEX = 0
@@ -18,3 +19,13 @@ def roll():
 def test_fails(roll):
     if INDEX == 2:
         assert False
+
+
+def test_sleep():
+    sleep(1)
+    assert True
+
+
+@pytest.mark.parametrize("i", range(10))
+def test_passes(i):
+    assert True
