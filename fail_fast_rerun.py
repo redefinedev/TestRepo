@@ -1,6 +1,6 @@
 import pytest
 from time import sleep
-
+INDEX = 0
 
 # this test should run twice
 # it should pass on the second run only
