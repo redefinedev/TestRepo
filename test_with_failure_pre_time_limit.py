@@ -2,8 +2,8 @@ from time import sleep
 
 import pytest
 
-def test_fail():
-    sleep(1)
+def test_failed_sleep():
+    sleep(0.98)
     assert False
 
 def test_fail_pre_time_limit():
