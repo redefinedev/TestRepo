@@ -12,3 +12,7 @@ def test_passed_rerun():
     if INDEX == 1:
         assert False
     assert True
+
+
+def test_after_failed():
+    assert True
