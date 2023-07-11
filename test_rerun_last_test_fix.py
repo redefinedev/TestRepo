@@ -10,5 +10,5 @@ def test_passed_rerun():
     global INDEX
     INDEX += 1
     if INDEX == 1:
-        assert True
-    assert False
+        assert False
+    assert True
