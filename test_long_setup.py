@@ -3,6 +3,7 @@ import pytest
 
 INDEX = 0
 
+
 # the first run should fail quickly
 # the second run should fail after 1 second
 # thus producing a 'success' report in the setup phase (from pytest side)
@@ -18,3 +19,7 @@ def test_fails(setup):
     global INDEX
     INDEX += 1
     assert False
+
+
+def test_passes():
+    assert True
