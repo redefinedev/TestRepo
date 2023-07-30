@@ -1,11 +1,12 @@
 import pytest
 
-def test_passes():
-  pass
+class TestClass:
+  def test_passes(self,):
+    pass
 
-def test_fails():
-  assert 1 == 0
+  def test_fails(self,):
+    assert 1 == 0
 
-@pytest.mark.skip
-def test_skipped():
-  assert 1 == 2
+  @pytest.mark.skip
+  def test_skipped():
+    assert 1 == 2
