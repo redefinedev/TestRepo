@@ -1,6 +1,3 @@
-import pytest
-
-
 def test_passes():
     pass
 
@@ -14,9 +11,4 @@ def test_fails():
 
 
 def test_fails2():
-    assert 1 == 2
-
-
-@pytest.mark.skip
-def test_skipped():
     assert 1 == 2
