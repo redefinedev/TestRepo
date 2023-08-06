@@ -3,6 +3,6 @@
 import pytest
 
 
-@pytest.mark.parametrize("i", range(10))
+@pytest.mark.parametrize("i", range(8))
 def test_passes(i):
     pass
