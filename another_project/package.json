@@ -1,0 +1,13 @@
+{
+  "name": "cypress_tests_support",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "10.07"
+  }
+}
