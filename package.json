@@ -9,5 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "10.07"
+  },
+  "devDependencies": {
+    "@replayio/cypress": "^1.3.5"
   }
 }
