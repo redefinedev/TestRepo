@@ -1,21 +1,8 @@
 const { defineConfig } = require("cypress");
+const { plugin: replayPlugin } = require("@replayio/cypress")
 
 const registerPlugin = (on, config) => {
-  on("after:run", (results) => {
-    console.log("after run 1");
-  });
-  on("after:spec", (spec, results) => {
-    console.log("after spec 1");
-  });
-  on("before:browser:launch", (browser = {}, launchOptions) => {
-    console.log("before browser launch 1");
-  });
-  on("before:run", (results) => {
-    console.log("before run 1");
-  });
-  on("before:spec", (spec, results) => {
-    console.log("before spec 1");
-  });
+  replayPlugin(on, config);
   return config;
 };
 
