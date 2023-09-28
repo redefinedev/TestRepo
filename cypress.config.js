@@ -19,9 +19,6 @@ module.exports = defineConfig({
       on("before:spec", (spec, results) => {
         console.log(results);
       });
-      on("task", (results) => {
-        console.log(results);
-      });
 
       return config;
     },
