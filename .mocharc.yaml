@@ -1,2 +1,2 @@
 require:
-        - '/home/britt/projects/bernese/bernese/agents/road_runner/mocha_cypress_js/mocha/src/RootHook.js'
+        - 'Redefine.js'
