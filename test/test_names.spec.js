@@ -3,20 +3,20 @@
 const assert = require("assert");
 
 
-describe("Suite with the same suite name", () => {
-    it("Test name is different 1", () => {
+describe("First big suite", () => {
+    it("first test", () => {
         assert.equal(9, 9);
     });
 });
 
-describe("Suite with the same suite name", () => {
-    it("Test name is different 2", () => {
+describe("Second big suite", () => {
+    it("Test 2", () => {
         assert.equal(9, 9);
     });
 });
 
-describe("Suite that contains a suite with the same name", () => {
-    describe("Suite that contains a suite with the same name", () => {
+describe("Third big Suite contains a suite", () => {
+    describe("inside suite", () => {
         it("sum 7 2 ", () => {
             assert.equal(9, 9);
         });
@@ -24,27 +24,11 @@ describe("Suite that contains a suite with the same name", () => {
     });
 });
 
-describe("Suite that contains multiple tests with the same name", () => {
-    it("Test with same name", () => {
-        assert.equal(true, true);
+describe("Fourth Suite", () => {
+    it("Test fails", () => {
+        assert.equal(false, true);
     });
-    it("Test with same name", () => {
-        assert.equal(true, true);
-    });
-    it("Test with same name", () => {
+    it("Test passes", () => {
         assert.equal(true, true);
     });
 });
-
-describe("A suite with the same test name 1", () => {
-    it("unique name", () => {
-        assert.equal(true, true);
-    });
-})
-
-describe("A suite with the same test name 2", () => {
-    it("unique name", () => {
-        assert.equal(true, true);
-    });
-})
-
