@@ -1,2 +1,0 @@
-require:
-        - '/home/britt/projects/bernese/bernese/agents/road_runner/mocha_cypress_js/rr_package/build/RootHook.js'
