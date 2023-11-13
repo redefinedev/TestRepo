@@ -7,7 +7,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "10.07"
+  "devDependencies": {
+    "cypress": "^13.5.0",
+    "cypress-cloud": "^1.9.6"
   }
 }
