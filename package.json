@@ -7,13 +7,11 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "10.07"
-  },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.12",
     "@cypress/webpack-preprocessor": "^5.12.2",
     "@neuralegion/cypress-har-generator": "^5.1.1",
+    "cypress": "^13.4.0",
     "cypress-axe": "^1.4.0",
     "cypress-file-upload": "^4.1.1",
     "cypress-iframe": "^1.0.1",
