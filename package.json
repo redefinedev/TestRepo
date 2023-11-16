@@ -6,8 +6,5 @@
     "test": "npx cypress run"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "10.11"
-  }
+  "license": "ISC"
 }
