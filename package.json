@@ -7,9 +7,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "10.07"
-  },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.12",
     "@cypress/webpack-preprocessor": "^5.12.2",
