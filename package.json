@@ -6,7 +6,9 @@
     "test": "./test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/** --recursive",
+    "test-subdir": "mocha test/foo/** --recursive",
+    "test-subdir-2": "mocha test/foo/bar/** --recursive"
   },
   "engines": {
     "node": ">=10.0.0"
