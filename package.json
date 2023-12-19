@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "10.07"
+    "cypress": "13.6.1",
+    "@replayio/cypress": "^1.7.0"
   }
 }
