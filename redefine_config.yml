@@ -1,0 +1,5 @@
+job_name: ss
+pipeline_name: bar
+source_branch: cypress_installer_custom_project
+stable_branches:
+- main
