@@ -6,7 +6,11 @@
     "test": "./test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test-beforeAll": "mocha test/beforeAll.spec.js",
+    "test-beforeEach": "mocha test/beforeEach.spec.js",
+    "test-afterAll": "mocha test/afterAll.spec.js",
+    "test-afterEach": "mocha test/afterEach.spec.js"
   },
   "engines": {
     "node": ">=10.0.0"
