@@ -8,7 +8,7 @@ function sleep(delay) {
 }
 
 describe("afterAll hook fails", () => {
-    afterAll(() => {
+    after(() => {
         assert.equal(false, true);
     })
     it("test one", () => {
@@ -20,34 +20,40 @@ describe("afterAll hook fails", () => {
 });
 
 describe("general long suite 1", () => {
-    it("test three", () => {
+    it("test three", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
-    it("test four", () => {
+    it("test four", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
 });
 
 describe("general long suite 2", () => {
-    it("test five", () => {
+    it("test five", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
-    it("test six", () => {
+    it("test six", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
 });
 
 describe("general long suite 3", () => {
-    it("test seven", () => {
+    it("test seven", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
-    it("test eight", () => {
+    it("test eight", function(done) {
         assert.equal(true, true);
+        done();
         sleep(2000);
     });
 });
