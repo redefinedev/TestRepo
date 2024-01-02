@@ -12,7 +12,7 @@ describe("First big suite", () => {
     it("first test", function (done)  {
         assert.equal(9, 9);
         done();
-        sleep(3000);
+        sleep(2000);
     });
 });
 
