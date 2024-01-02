@@ -1,3 +1,2 @@
 require:
-        - 'Redefine.js'
-        - 'MochaRedefine.js'
+        - plugin
