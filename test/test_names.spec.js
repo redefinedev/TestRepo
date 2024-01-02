@@ -10,7 +10,7 @@ function sleep(delay) {
 
 describe("First big suite", () => {
     it("first test", function (done)  {
-        assert.equal(9, 9);
+        assert.equal(8, 9);
         done();
         sleep(3000);
     });
