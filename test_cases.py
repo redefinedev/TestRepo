@@ -10,7 +10,16 @@ def test_dynamic_skip():
     pytest.skip('dynamic skip')
 
 def test_fails():
-  time.sleep(5)
+  time.sleep(1)
+  assert 1 == 0
+
+def test_fails2():
+  time.sleep(0.5)
+  assert 1 == 0
+
+
+def test_fails3():
+  time.sleep(1)
   assert 1 == 0
 
 @pytest.mark.skip
