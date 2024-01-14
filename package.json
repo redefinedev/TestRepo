@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cy2 run"
   },
   "author": "",
   "license": "ISC"
