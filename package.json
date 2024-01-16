@@ -6,5 +6,8 @@
     "test": "npx cy2 run"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cypress-cloud": "^1.9.6"
+  }
 }
