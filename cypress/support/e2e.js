@@ -20,4 +20,4 @@ import './commands'
 // require('./commands')
 
 
-require('./Hook.js').hookPlugin(Cypress);
+// require('./Hook.js').hookPlugin(Cypress);
