@@ -1,10 +1,10 @@
 import pytest
 
 def test_passes():
-  pass
+  assert 1 == 0
 
 def test_fails():
-  assert 1 == 0
+  assert 1 == 1
 
 @pytest.mark.skip
 def test_skipped():
