@@ -7,10 +7,10 @@ on:
 
 jobs:
   Predict:
+    runs-on: ubuntu-latest
     steps:
       - name: Redefine
         uses: ./.github/actions/redefine
-        runs-on: ubuntu-latest
         with:
           auth: ""
           testing-framework: "cypress"
