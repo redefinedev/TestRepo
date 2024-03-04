@@ -6,7 +6,8 @@ on:
 jobs:
   Predict:
     steps:
-      - uses: ./.github/actions/redefine
+      - name: Redefine
+        uses: ./.github/actions/redefine
         with:
           auth: ""
           testing-framework: "cypress"
