@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Redefine
         uses: ./.github/actions/redefine
+        runs-on: "ubuntu-latest"
         with:
           auth: ""
           testing-framework: "cypress"
