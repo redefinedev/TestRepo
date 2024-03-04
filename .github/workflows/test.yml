@@ -11,4 +11,4 @@ jobs:
         mode: "discover"
         output-path: "./test.txt"
         timeout: 20
-        predict-command: "npm install && npm run cypress"
+        predict-command: "npm install && npm run test"
