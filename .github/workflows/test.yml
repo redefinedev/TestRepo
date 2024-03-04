@@ -1,0 +1,14 @@
+name: Redefine
+
+jobs:
+  Predict:
+    steps:
+      - uses: ./.github/actions/redefine
+      with:
+        auth: ""
+        testing-framework: "cypress"
+        command: "predict"
+        mode: "discover"
+        output-path: "./test.txt"
+        timeout: 20
+        predict-command: "npm install && npm run cypress"
