@@ -1,0 +1,25 @@
+name: Redefine
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  Predict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Redefine
+        uses: ./.github/actions/redefine
+        with:
+          auth: ""
+          testing-framework: "cypress"
+          command: "predict"
+          mode: "discover"
+          output-path: "./test.txt"
+          timeout: 20
+          predict-command: "npm install && npm run test"
