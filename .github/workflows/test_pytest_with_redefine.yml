@@ -21,7 +21,3 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: Run Redefine predict 
-        with:
-          repository: redefinedev/redefine-action
-          path: redefine-action
