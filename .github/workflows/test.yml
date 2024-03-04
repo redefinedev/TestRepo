@@ -9,6 +9,10 @@ jobs:
   Predict:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
       - name: Redefine
         uses: ./.github/actions/redefine
         with:
