@@ -20,7 +20,7 @@ describe("basic parametrize suite test", () => {
     ];
 
     data.forEach((data) => {
-        it("parametrize test", () => {
+        it(`parametrize test ${data.name}`, () => {
             expect(data.age).to.be.greaterThan(10);
             cy.wait(1000);
         });
