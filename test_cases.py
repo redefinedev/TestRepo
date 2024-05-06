@@ -1,6 +1,7 @@
 import pytest
 
-def test_passes():
+@pytest.mark.parametrize("i", range(2))
+def test_passes(i):
   pass
 
 def test_fails():
