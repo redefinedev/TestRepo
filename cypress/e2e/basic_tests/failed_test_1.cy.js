@@ -1,5 +1,5 @@
 describe("first failing suite", () => {
-    it("failing 1", () => {
+    it("failing test 1", () => {
         expect(true).to.equal(false);
     });
 
