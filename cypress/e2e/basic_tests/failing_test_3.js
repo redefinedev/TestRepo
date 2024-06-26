@@ -1,7 +1,6 @@
+describe("third failing suite", () => {
 
-describe("suite with failing test", () => {
-
-    it("failing test", () => {
+    it("failing test 3", () => {
 	    // this test should fail
         expect(true).to.equal(false);
     });
