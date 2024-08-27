@@ -1,0 +1,5 @@
+com/example/SimpleTest.class
+com/example/AllTestsExtension$test.class
+com/example/AllTestsExtension.class
+com/example/ExtraTest.class
+com/example/CustomClassOrderer.class
